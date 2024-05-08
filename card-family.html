@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+
+<html lang="ru" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="styles.css">
+	<link rel="stylesheet" href="fonts.css">
+   
+   <title>korean.spb - Карточка </title>
+
+</head>
+<body>
+
+<!-- Горизонтальное меню -->
+<div class="navbar">
+    <a href="main.html"><img src="img/korean.spb.svg" alt="Логотип"></a>
+    <div>
+        <div class="dropdown">
+            <a href="#">Обучение <img src ="img/arrow.svg" id="arrow"></a>
+            <div class="dropdown-content">
+                <a href="courses.html">Курсы</a>
+                <a href="flesh-cards.html">Флеш-карточки</a>
+                <a href="multimedia.html">Мультимедийные материалы</a>
+            </div>
+        </div>
+        <a href="articles.html">Статьи</a>
+        <a href="about.html">О нас</a>
+        <a href="#" id="find-partner">Найти напарника</a>
+        <a href="personal-account.html"><img src="img/profile.svg" alt="Профиль" style="width: 55px; height: 55px;"></a>
+    </div>
+</div>
+
+
+<!-- Модальное окно для формы -->
+<div id="partner-modal" class="modal">
+    <div class="modal-content">
+        <span class ="close">&times;</span>
+        <h2 style=" font-family: 'Gilroy Regular'; font-size: 25px; font-weight: normal;">Найти напарника</h2>
+        <form id="Form1">
+		<p style=" font-family: 'Gilroy Regular'; font-size: 15px;">Заполните данную форму, мы подберём вам подходящего кандидата и свяжемся с вами по почте, отправив его контакты для вашего дальнейшего совместного обучения!</p>
+            <input class="FindPartner" type="text" placeholder="Имя пользователя" id="name" required /><br>
+			 <input class="FindPartner" type="email" placeholder="Электронная почта" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required /><br>
+            <input class="FindPartner" type="text" placeholder="Уровень языка" required /><br>
+			 <textarea placeholder="Краткая информация о себе, целях изучения языка, своём уровне и пожеланиях" style="height: 100px;"/></textarea><br>
+            <button type="submit" id="submit" disabled >Отправить</button>
+        </form>
+    </div>
+</div>
+
+<!-- Уведомление об успешной отправке -->
+<div id="successNotification" class="success-notification">
+    Спасибо, заявка отправлена, мы скоро с вами свяжемся!
+</div>
+
+<div class="centered-container"> <!-- Контейнер, который центрирует все содержимое -->
+    <h2 class="heading">Тема: Семья (가족)</h2>
+
+
+<!-- Карточка с вопросом и вариантами ответа -->
+<div class="question-card">
+    <p>Как переводится слово 어머니?</p>
+    <div>
+        <button class="answer-button" onclick="checkAnswer(this, 'мама')">сестра</button>
+        <button class="answer-button" onclick="checkAnswer(this, 'мама')">дочь</button>
+    </div>
+    <div>
+        <button class="answer-button" onclick="checkAnswer(this, 'мама')">мама</button>
+        <button class="answer-button" onclick="checkAnswer(this, 'мама')">отец</button>
+    </div>
+</div>
+
+<!-- Контейнер под карточкой -->
+<div class="card-bottom">
+    <!-- Иконка сброса -->
+    <span class="reset-icon" onclick="resetAnswer()">&#x21ba;</span> 
+
+    <!-- Кнопка "Далее" -->
+    <button class="next-button" onclick="nextQuestion()">Далее</button>
+</div>
+</div>
+<!-- Стрелка "вернуться к темам карточек" -->
+
+<div class ="go-back">
+    <a href="flesh-cards.html"  class="text-back">
+       <span> &#x2039; вернуться к темам карточек </span>
+    </a>
+</div>
+
+<footer>
+
+<div class="footer">
+    <!-- Логотип слева -->
+    <div class="logo">
+       <a href="main.html"><img src="img/korean.spb.svg" alt="Логотип"></a>
+    </div>
+
+    <!-- Контактная информация справа -->
+    <div class="contact-info">
+        <!-- Номер телефона -->
+        <div class="contact-item">
+            <img src="img/PHONE.svg" alt="Телефон">
+            <span>+7 985 346 74 23</span>
+        </div>
+        <!-- Адрес электронной почты -->
+        <div class="contact-item">
+            <img src="img/MAIL.svg" alt="Почта">
+            <span>koreanspb@mail.ru</span>
+        </div>
+    </div>
+</div>
+
+</footer>
+
+<script src="script.js" async></script>
+<script>
+         // Массив вопросов
+        const questions = [
+            {
+                text: 'Как переводится слово 어머니?',
+                options: ['сестра', 'дочь', 'мама', 'отец'],
+                correct: 'мама',
+            },
+            {
+                text: 'Как переводится слово 이모?',
+                options: ['сын', 'отец', 'дочь', 'тётя'],
+                correct: 'тётя',
+            },
+            {
+                text: 'Как переводится слово 아버지?',
+                options: ['отец', 'мама', 'дедушка', 'брат'],
+                correct: 'отец',
+            },
+		    {
+                text: 'Как переводится слово 자매?',
+                options: ['дедушка', 'сестра', 'внук', 'брат'],
+                correct: 'сестра',
+            },
+			{
+                text: 'Как переводится слово 아들?',
+                options: ['дедушка', 'внук', 'сын', 'брат'],
+                correct: 'сын',
+            },
+			{
+                text: 'Как переводится слово 형제?',
+                options: ['брат', 'внук', 'дедушка', 'дядя'],
+                correct: 'брат',
+            },
+        ];
+
+        // Индекс текущего вопроса
+        let currentQuestionIndex = 0;
+
+
+    </script>
+</script>
+</body>
+</html>

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+
+<html lang="ru" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="styles.css">
+	<link rel="stylesheet" href="fonts.css">
+   
+   <title>korean.spb - Статьи </title>
+
+</head>
+<body>
+
+<!-- Горизонтальное меню -->
+<div class="navbar">
+    <a href="main.html"><img src="img/korean.spb.svg" alt="Логотип"></a>
+    <div>
+        <div class="dropdown">
+            <a href="#">Обучение <img src ="img/arrow.svg" id="arrow"></a>
+            <div class="dropdown-content">
+                <a href="courses.html">Курсы</a>
+                <a href="flesh-cards.html">Флеш-карточки</a>
+                <a href="multimedia.html">Мультимедийные материалы</a>
+            </div>
+        </div>
+        <a href="articles.html">Статьи</a>
+        <a href="about.html">О нас</a>
+        <a href="#" id="find-partner">Найти напарника</a>
+        <a href="personal-account.html"><img src="img/profile.svg" alt="Профиль" style="width: 55px; height: 55px;"></a>
+    </div>
+</div>
+
+
+<!-- Модальное окно для формы -->
+<div id="partner-modal" class="modal">
+    <div class="modal-content">
+        <span class ="close">&times;</span>
+        <h2 style=" font-family: 'Gilroy Regular'; font-size: 25px; font-weight: normal;">Найти напарника</h2>
+        <form id="Form1">
+		<p style=" font-family: 'Gilroy Regular'; font-size: 15px;">Заполните данную форму, мы подберём вам подходящего кандидата и свяжемся с вами по почте, отправив его контакты для вашего дальнейшего совместного обучения!</p>
+            <input class="FindPartner" type="text" placeholder="Имя пользователя" id="name" required /><br>
+			 <input class="FindPartner" type="email" placeholder="Электронная почта" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required /><br>
+            <input class="FindPartner" type="text" placeholder="Уровень языка" required /><br>
+			 <textarea placeholder="Краткая информация о себе, целях изучения языка, своём уровне и пожеланиях" style="height: 100px;"/></textarea><br>
+            <button type="submit" id="submit" disabled >Отправить</button>
+        </form>
+    </div>
+</div>
+
+<!-- Уведомление об успешной отправке -->
+<div id="successNotification" class="success-notification">
+    Спасибо, заявка отправлена, мы скоро с вами свяжемся!
+</div>
+    <h2 class="heading">Открой для себя что-то новое</h2>
+
+
+<div class="main-wrapper"> <!-- Общий контейнер по центру -->
+
+   <div class="filter-wrapper"> <!-- Фильтр -->
+        <div class="filter-container" onmouseover="showDropdown()" onmouseout="hideDropdown()"> <!-- Контейнер кнопки и выпадающего списка -->
+            <button class="filter-button">Категория <img src ="img/articles/arrow.svg" id="down"></button> <!-- Кнопка фильтра -->
+            <div class="category-dropdown"> 
+            <a href="#" onclick="filterArticles('Обучение')">Обучение</a>
+            <a href="#" onclick="filterArticles('Поп-культура')">Поп-культура</a>
+            <a href="#" onclick="filterArticles('Культура')">Культура</a>
+            <a href="#" onclick="filterArticles('Все')">Все</a>
+        </div>
+    </div>
+    </div>
+    <!-- Карточки статей -->
+<div class="article-card">
+    <div>
+        <p><strong>Заголовок 1</strong><span class="category-tag">Обучение</span></p>
+        <p>Описание статьи о процессе обучения.</p>
+    </div>
+    <button class="article-button">Подробнее</button>
+</div>
+
+<div class="article-card">
+    <div>
+        <p><strong>Заголовок 2</strong><span class="category-tag">Поп-культура</span></p>
+        <p>Описание статьи о поп-культуре и современных трендах.</p>
+    </div>
+    <button class="article-button">Подробнее</button>
+</div>
+
+<div class="article-card">
+    <div>
+        <p><strong>Заголовок 3</strong><span class="category-tag">Обучение</span></p>
+        <p>Описание статьи о новых методах обучения.</p>
+    </div>
+    <button class="article-button">Подробнее</button>
+</div>
+
+<div class="article-card">
+    <div>
+        <p><strong>Заголовок 4</strong><span class="category-tag">Культура</span></p>
+        <p>Описание статьи о культурных особенностях.</p>
+    </div>
+    <button class="article-button">Подробнее</button>
+</div>
+
+<div class="article-card">
+    <div>
+        <p><strong>Заголовок 5</strong><span class="category-tag">Поп-культура</span></p>
+        <p>Описание статьи о поп-культуре и современных трендах.</p>
+    </div>
+    <button class="article-button">Подробнее</button>
+</div>
+
+    <!-- Другие карточки статей -->
+
+</div>
+
+<footer>
+
+<div class="footer">
+    <!-- Логотип слева -->
+    <div class="logo">
+       <a href="main.html"><img src="img/korean.spb.svg" alt="Логотип"></a>
+    </div>
+
+    <!-- Контактная информация справа -->
+    <div class="contact-info">
+        <!-- Номер телефона -->
+        <div class="contact-item">
+            <img src="img/PHONE.svg" alt="Телефон">
+            <span>+7 985 346 74 23</span>
+        </div>
+        <!-- Адрес электронной почты -->
+        <div class="contact-item">
+            <img src="img/MAIL.svg" alt="Почта">
+            <span>koreanspb@mail.ru</span>
+        </div>
+    </div>
+</div>
+
+</footer>
+<script src="script.js" async></script> 
+    <script>
+        function showDropdown() {
+            const dropdown = document.querySelector('.category-dropdown');
+            dropdown.style.display = 'block'; // Показывать список при наведении
+        }
+
+        function hideDropdown() {
+            const dropdown = document.querySelector('.category-dropdown');
+            dropdown.style.display = 'none'; // Скрывать список при уходе курсора
+        }
+
+        function filterArticles(category) {
+            const articles = document.querySelectorAll('.article-card');
+            articles.forEach(article => {
+                const categoryText = article.querySelector('.category-tag').textContent;
+                if (category === 'Все' || categoryText === category) {
+                    article.style.display = 'flex'; /* Показывать при совпадении */
+                } else {
+                    article.style.display = 'none'; /* Скрывать при несовпадении */
+                }
+            });
+            hideDropdown(); // Скрыть выпадающий список после выбора категории
+        }
+
+        document.addEventListener('click', function(event) {
+            const filterWrapper = document.querySelector('.filter-wrapper');
+            const dropdown = document.querySelector('.category-dropdown');
+            if (!filterWrapper.contains(event.target)) { // Если клик за пределами
+                hideDropdown(); // Скрыть выпадающий список
+            }
+        });
+    </script>
+	
+
+</body>
+</html>

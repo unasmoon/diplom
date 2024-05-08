@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+
+<html lang="ru" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="styles.css">
+	<link rel="stylesheet" href="fonts.css">
+   
+   <title>korean.spb - Личный кабинет </title>
+
+</head>
+<body>
+
+<!-- Горизонтальное меню -->
+<div class="navbar">
+    <a href="main.html"><img src="img/korean.spb.svg" alt="Логотип"></a>
+    <div>
+        <div class="dropdown">
+            <a href="#">Обучение <img src ="img/arrow.svg" id="arrow"></a>
+            <div class="dropdown-content">
+                <a href="courses.html">Курсы</a>
+                <a href="flesh-cards.html">Флеш-карточки</a>
+                <a href="multimedia.html">Мультимедийные материалы</a>
+            </div>
+        </div>
+        <a href="articles.html">Статьи</a>
+        <a href="about.html">О нас</a>
+        <a href="#" id="find-partner">Найти напарника</a>
+        <a href="personal-account.html"><img src="img/profile.svg" alt="Профиль" style="width: 55px; height: 55px;"></a>
+    </div>
+</div>
+
+
+<!-- Модальное окно для формы -->
+<div id="partner-modal" class="modal">
+    <div class="modal-content">
+        <span class ="close">&times;</span>
+        <h2 style=" font-family: 'Gilroy Regular'; font-size: 25px; font-weight: normal;">Найти напарника</h2>
+        <form id="Form1">
+		<p style=" font-family: 'Gilroy Regular'; font-size: 15px;">Заполните данную форму, мы подберём вам подходящего кандидата и свяжемся с вами по почте, отправив его контакты для вашего дальнейшего совместного обучения!</p>
+            <input class="FindPartner" type="text" placeholder="Имя пользователя" id="name" required /><br>
+			 <input class="FindPartner" type="email" placeholder="Электронная почта" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required /><br>
+            <input class="FindPartner" type="text" placeholder="Уровень языка" required /><br>
+			 <textarea placeholder="Краткая информация о себе, целях изучения языка, своём уровне и пожеланиях" style="height: 100px;"/></textarea><br>
+            <button type="submit" id="submit" disabled >Отправить</button>
+        </form>
+    </div>
+</div>
+
+<!-- Уведомление об успешной отправке -->
+<div id="successNotification" class="success-notification">
+    Спасибо, заявка отправлена, мы скоро с вами свяжемся!
+</div>
+
+
+
+<div class="profile-wrapper">
+    <div class="profile-container">
+        <!-- Картинка профиля -->
+        <img src="img/personal-account/user-avatar.png" alt="Фото пользователя" class="profile-photo">
+
+        <!-- Блок информации пользователя -->
+        <div class="profile-info-container">
+            <!-- Имя и фамилия с иконкой настройки -->
+            <div class="profile-info">
+                <span class="user-name">Иван Иванов</span>
+                <img src="img/personal-account/settings-icon.png" alt="Настройки" class="settings-icon" onclick="enableEditing()">
+            </div>
+
+            <!-- Поля для ввода информации -->
+            <div class="editable-fields">
+                <input type="email" id="email" class="editable" placeholder="Электронная почта" disabled>
+                <input type="text" id="language-level" class="editable" placeholder="Уровень языка" disabled>
+                <input type="text" id="study-duration" class="editable" placeholder="Время изучения" disabled>
+            </div>
+
+            <!-- Кнопка "Сохранить" -->
+            <button id="save-button" onclick="saveChanges()" style="display: none;">Сохранить</button>
+        </div>
+    </div>
+</div>
+
+<div class="favorites-section">
+    <h2 class="heading">Избранное</h2>
+    
+
+    <!-- Секция для избранных курсов -->
+    <details id="course-section">
+        <summary>Курсы</summary>
+        <div class="favorites-container" id="favorites-courses">
+            <!-- Здесь будут отображаться избранные карточки курсов -->
+        </div>
+    </details>
+
+    <!-- Секция для избранных флеш-карточек -->
+    <details id="flashcard-section">
+        <summary>Флеш-карточки</summary>
+        <div class="favorites-container" id="favorites-flashcards">
+            <!-- Здесь будут отображаться избранные флеш-карточки -->
+        </div>
+    </details>
+
+    <!-- Секция для избранных мультимедийных материалов -->
+    <details id="media-section">
+        <summary>Мультимедийные материалы</summary>
+        <div class="favorites-container" id="favorites-media">
+            <!-- Здесь будут отображаться избранные мультимедийные материалы -->
+        </div>
+    </details>
+</div>
+
+
+
+<footer>
+
+<div class="footer">
+    <!-- Логотип слева -->
+    <div class="logo">
+       <a href="main.html"><img src="img/korean.spb.svg" alt="Логотип"></a>
+    </div>
+
+    <!-- Контактная информация справа -->
+    <div class="contact-info">
+        <!-- Номер телефона -->
+        <div class="contact-item">
+            <img src="img/PHONE.svg" alt="Телефон">
+            <span>+7 985 346 74 23</span>
+        </div>
+        <!-- Адрес электронной почты -->
+        <div class="contact-item">
+            <img src="img/MAIL.svg" alt="Почта">
+            <span>koreanspb@mail.ru</span>
+        </div>
+    </div>
+</div>
+
+</footer>
+
+
+<script src="script.js" async></script> 
+    <script>
+	
+function enableEditing() {
+    // Делаем поля ввода доступными и показываем кнопку "Сохранить"
+    document.querySelectorAll('.editable').forEach(field => {
+        field.disabled = false;
+    });
+    
+    const saveButton = document.querySelector('#save-button');
+    saveButton.style.display = 'block'; // Показываем кнопку
+}
+
+function saveChanges() {
+    // Делаем поля ввода недоступными и скрываем кнопку "Сохранить"
+    document.querySelectorAll('.editable').forEach(field => {
+        field.disabled = true;
+    });
+
+    const saveButton = document.querySelector('#save-button');
+    saveButton.style.display = 'none'; // Скрываем кнопку
+}
+		
+		
+		
+		
+// Функция отображения избранных карточек в личном кабинете
+function displayFavorites() {
+    const favorites = JSON.parse(localStorage.getItem('favorites')) || [];
+    const favoritesContainer = document.getElementById('favorites-container'); // Контейнер
+
+    favoritesContainer.innerHTML = ''; // Очищаем контейнер перед добавлением
+
+    favorites.forEach(cardId => {
+        const card = document.getElementById(cardId).cloneNode(true); // Копируем карточку
+        card.querySelector('.favorite-button').style.display = 'none'; // Убираем звёздочку
+        favoritesContainer.appendChild(card); // Добавляем в контейнер
+    });
+}
+
+// При загрузке страницы
+document.addEventListener('DOMContentLoaded', displayFavorites);
+
+		
+    </script>
+</body>
+</html>

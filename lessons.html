@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+
+<html lang="ru" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="styles.css">
+	<link rel="stylesheet" href="fonts.css">
+   
+   <title>korean.spb - Уроки </title>
+
+</head>
+<body>
+
+<!-- Горизонтальное меню -->
+<div class="navbar">
+    <a href="main.html"><img src="img/korean.spb.svg" alt="Логотип"></a>
+    <div>
+        <div class="dropdown">
+            <a href="#">Обучение <img src ="img/arrow.svg" id="arrow"></a>
+            <div class="dropdown-content">
+                <a href="courses.html">Курсы</a>
+                <a href="flesh-cards.html">Флеш-карточки</a>
+                <a href="multimedia.html">Мультимедийные материалы</a>
+            </div>
+        </div>
+        <a href="articles.html">Статьи</a>
+        <a href="about.html">О нас</a>
+        <a href="#" id="find-partner">Найти напарника</a>
+        <a href="personal-account.html"><img src="img/profile.svg" alt="Профиль" style="width: 55px; height: 55px;"></a>
+    </div>
+</div>
+
+
+<!-- Модальное окно для формы -->
+<div id="partner-modal" class="modal">
+    <div class="modal-content">
+        <span class ="close">&times;</span>
+        <h2 style=" font-family: 'Gilroy Regular'; font-size: 25px; font-weight: normal;">Найти напарника</h2>
+        <form id="Form1">
+		<p style=" font-family: 'Gilroy Regular'; font-size: 15px;">Заполните данную форму, мы подберём вам подходящего кандидата и свяжемся с вами по почте, отправив его контакты для вашего дальнейшего совместного обучения!</p>
+            <input class="FindPartner" type="text" placeholder="Имя пользователя" id="name" required /><br>
+			 <input class="FindPartner" type="email" placeholder="Электронная почта" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required /><br>
+            <input class="FindPartner" type="text" placeholder="Уровень языка" required /><br>
+			 <textarea placeholder="Краткая информация о себе, целях изучения языка, своём уровне и пожеланиях" style="height: 100px;"/></textarea><br>
+            <button type="submit" id="submit" disabled >Отправить</button>
+        </form>
+    </div>
+</div>
+
+<!-- Уведомление об успешной отправке -->
+<div id="successNotification" class="success-notification">
+    Спасибо, заявка отправлена, мы скоро с вами свяжемся!
+</div>
+
+<div class="centered-container"> <!-- Контейнер, который центрирует все содержимое -->
+    <h2 class="heading">Программа первого уровня</h2>
+
+   <!-- Контейнер для карточек -->
+    <div class="cards-container">
+        <!-- Карточки -->
+        <div class="cards">
+            <p class="cards-title">Урок 1</p>
+            <p  class="cards-text">В этом уроке рассматривается составление повествовательных, вопросительных предложений. Разбирается словарный состав языка.</p>
+            <button class="cards-button" onclick="document.location='lesson.html'">Пройти</button>
+        </div>
+
+        <div class="cards">
+           <p class="cards-title">Урок 2</p>
+            <p  class="cards-text">В этом уроке проходит изучение лексики по теме "Знакомство". Вы научитесь как приветствовать человека и представляться.</p>
+            <button class="cards-button">Пройти</button>
+        </div>
+
+        <div class="cards">
+            <p class="cards-title">Урок 3</p>
+            <p  class="cards-text">В этом уроке рассматриваются особенности словарного состава языка. Вы научитесь образовывать подлежащее и правильно использовать его в предложении.</p>
+            <button class="cards-button">Пройти</button>
+        </div>
+
+        <div class="cards">
+             <p class="cards-title">Урок 4</p>
+            <p  class="cards-text">В этом уроке наглядно изучается, что такое сказуемое. Вы научитесь его образовывать и правильно использовать в предложении.</p>
+            <button class = "cards-button">Пройти</button>
+        </div>
+
+        <div class="cards">
+             <p class="cards-title">Урок 5</p>
+            <p  class="cards-text">В этом уроке рассматриваются вопросительные вопросы. Вы научитесь образовывать общий вопрос.</p>
+            <button class = "cards-button">Пройти</button>
+        </div>
+    </div>
+</div>
+
+<footer>
+
+<div class="footer">
+    <!-- Логотип слева -->
+    <div class="logo">
+       <a href="main.html"><img src="img/korean.spb.svg" alt="Логотип"></a>
+    </div>
+
+    <!-- Контактная информация справа -->
+    <div class="contact-info">
+        <!-- Номер телефона -->
+        <div class="contact-item">
+            <img src="img/PHONE.svg" alt="Телефон">
+            <span>+7 985 346 74 23</span>
+        </div>
+        <!-- Адрес электронной почты -->
+        <div class="contact-item">
+            <img src="img/MAIL.svg" alt="Почта">
+            <span>koreanspb@mail.ru</span>
+        </div>
+    </div>
+</div>
+
+</footer>
+
+<script src="script.js" async></script> 
+
+</body>
+</html>

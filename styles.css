@@ -1,0 +1,1154 @@
+html {
+	overflow-x: hidden !important;
+	overflow-y: auto !important;
+}
+
+h2{
+	font-family: 'Gilroy Light';
+	font-size: 30px;
+}
+
+p{
+	font-family: 'Gilroy Light';
+	font-size: 19px;
+}
+  .navbar {
+      display: flex;
+      justify-content: space-around;
+      align-items: baseline;
+      background-color: white;
+      padding: 10px;
+	}
+
+  .navbar a {
+      color: black;
+	  font-family: 'Gilroy Regular';
+	  font-size: 25px;
+      text-decoration: none;
+      padding: 8px 16px;
+    }
+
+        .navbar a:hover {
+          color: #302E92;
+        }
+
+        /* Подменю */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: white;
+            min-width: 160px;
+            z-index: 1;
+            top: 100%;
+            left: 0;
+        }
+
+        .dropdown-content a {
+            display: block;
+            color: black;
+            text-decoration: none;
+            padding: 8px 16px;
+        }
+
+        .dropdown-content a:hover {
+            color: #302E92;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        /* Модальная форма */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+
+        .modal-content {
+            background-color: white;
+            margin: 10% auto;
+            padding: 20px;
+            border: 3px solid #302E92;
+            width: 400px;
+            text-align: center;
+			border-radius: 10%;	
+        }
+
+.FindPartner {
+	background-color: #e4e4f1;
+	border-radius: 10px 10px 10px 10px; /*Закругляем уголки*/
+	border: none ;
+	width: 300px; 
+	height: 30px; 
+	margin-bottom: 3%;
+    padding-left: 3%; /* Устанавливаем отступ справа на 20 пикселей (или любое другое значение) */
+	font-family: 'Gilroy Regular'; 
+	font-size: 15px;
+}
+
+textarea {
+	background-color: #e4e4f1;
+	border-radius: 10px 10px 10px 10px; /*Закругляем уголки*/
+	border: none ;
+	width: 300px; 
+	height: 30px; 
+	margin-bottom: 3%;
+    padding-left: 3%; /* Устанавливаем отступ справа на 20 пикселей (или любое другое значение) */
+	resize: none;
+	font-family: 'Gilroy Regular'; 
+	font-size: 15px;
+}
+
+.close {
+	float: right; font-size: 20px;  font-weight: bold;
+	
+}
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+		
+		button {
+		color: #302E92;
+		font-size: 17px;
+		width: 150px;
+		height: 50px;
+		background-color: white;
+		border-radius: 30px 30px 30px 30px !important; /*Закругляем уголки*/
+		border-color: #302E92;
+		border: 1px solid #302E92;
+		font-family: 'Gilroy Medium';
+		cursor:pointer;
+		}
+		
+		button:disabled {
+            background-color: #e4e4f1;
+            color: #302E92;
+            cursor: not-allowed;
+		border-color: #302E92;
+        }
+		
+		button:hover:enabled {
+            background-color: #302E92;
+            color: white;
+			border-color: #302E92;
+        }
+		
+		 /* Стили для уведомления об успешной отправке */
+        .success-notification {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #e4e4f1;
+            color: black;
+            padding: 10px;
+            border-radius: 5px;
+            z-index: 2;
+            text-align: center;
+			font-family: 'Gilroy Regular'; 
+			font-size: 15px;
+        }
+		
+		  /* Уведомление о неправильном вводе email */
+        .error-notification {
+            display: none;
+            position: absolute;
+            color: black;
+			background-color: #e4e4f1;
+            font-size: 15px;
+            padding: 5px;
+			font-family: 'Gilroy Regular'; 
+            border-radius: 5px;
+        }
+		
+		
+	   /* ФУТЕР */
+
+     /* Стиль для футера */
+	 
+.footer {
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100px;
+    color: white;
+    padding: 0 40px;
+    border-top: 2px solid #302E92;
+	margin-top: 3%;
+}
+	
+	      /* Логотип слева */
+.logo {
+    max-height: 80px;
+    width: auto;
+    padding-right: 35%;
+}
+
+        /* Контактная информация справа */
+        .contact-info {
+            display: flex;
+            flex-direction: column; /* Вертикальное выравнивание */
+            align-items: flex-start; /* Центрирование по горизонтали */
+			font-family: 'Gilroy Regular'; 
+			font-size: 20px;
+			color: black;
+        }
+		
+        /* Элемент контактной информации */
+        .contact-item {
+            display: flex;
+            align-items: center; /* Центрирование по вертикали */
+            margin-bottom: 10px; /* Отступ между элементами */
+        }
+
+        /* Иконки */
+        .contact-item img {
+            height: 20px; /* Высота иконки */
+            margin-right: 10px; /* Отступ справа от иконки */
+        }
+
+        /* Номер телефона и адрес почты */
+        .contact-item span {
+        }
+
+
+
+
+/* ГЛАВНАЯ СТРАНИЦА */ 
+
+/* Первый блок */
+
+     /* Основной контейнер, центрированный по вертикали и горизонтали */
+        .container {
+            display: flex;
+            justify-content: center; /* Центрирование по горизонтали */
+            align-items: center; /* Центрирование по вертикали */
+			margin: 5%;
+            padding: 20px;
+        }
+
+        .content {
+            text-align: left; /* Выравнивание текста по левому краю */
+            margin-right: 20px; /* Отступ между содержимым и картинкой */
+			width: 50%;
+        }
+
+        .main-picture {
+            width: 300px; /* Ширина картинки */
+            height: 300px; /* Высота картинки */
+            border-radius: 50%; /* Круглая картинка */
+            text-align: center;
+            line-height: 100px; /* Выравнивание текста по вертикали */
+		}
+
+
+/* Второй блок */
+
+ /* Контейнер причин */
+ 
+        .reasons-container {
+            display: flex; /* Размещение слайдов в ряд */
+			width: 50%; /* Ширина слайдера */
+            margin: 0 auto; /* Центрируем по горизонтали */
+            align-items: flex-start; /* Выравнивание по вертикали */
+            justify-content: center; /* Стрелки по краям */
+        }
+		
+
+        /* Каждый слайд с изображением и текстом */
+        .reason {
+            flex: 0 0 33.33%; /* Каждый слайд занимает треть контейнера */
+            text-align: center; /* Выравнивание по центру */
+            padding: 50px; /* Отступ внутри слайда */
+        }
+
+
+/* Третий блок */
+
+/* Общий контейнер для всех блоков */
+        #learning-container {
+            display: flex;
+            flex-direction: column; /* Структура в виде столбца */
+            align-items: center; /* Центрируем содержимое по горизонтали */
+            padding: 20px;
+        }
+
+        /* Общие стили для блоков */
+        .learning {
+            display: flex; /* Выравнивание в строку */
+            align-items: center; /* Центрируем по вертикали */
+            width: 65%; /* Ширина блока */
+            padding: 2%;
+        }
+
+
+
+        /* Стили для контента внутри блоков */
+        .content1, .content2 {
+            text-align: center; /* Выравнивание по левому краю */
+            flex: 1; /* Контент занимает все свободное пространство */
+            margin-left: 10%; /* Отступ от картинки (если слева) */
+            margin-right: 10%; /* Отступ от картинки (если справа) */
+        }
+
+        /* Стиль для заголовков */
+        .headline {            
+		    text-align: center;
+			font-family: 'Gilroy Regular'; 
+			font-size: 30px;
+            margin-bottom: 10px; /* Отступ под заголовком */
+        }
+
+
+
+
+
+       /* КУРСЫ */
+
+      /* Заголовок */
+        .heading {
+            text-align: center; /* Центрирование */
+            margin-bottom: 20px !important; /* Отступ под заголовком */
+        }
+
+        /* Поисковая строка */
+        .search-box {
+            display: flex; /* Flexbox */
+            align-items: flex-start; /* Центрирование */
+            padding: 10px; /* Внутренние отступы */
+            background-color: white; /* Белый фон */
+            width: 50%; /* Ширина */
+            margin: 0 auto; /* Центрирование */
+            text-align: center;
+        }
+
+        /* Ввод в поисковой строке */
+        .search-box input {
+            border: none; /* Без обводки */
+            outline: none; /* Без фокуса */
+            flex: 1; /* Занимает всё пространство */
+            color: gray; /* Цвет текста */
+            font-size: 14px; /* Размер шрифта */
+			margin-top: 2%;
+        }
+
+        /* Иконка лупы в поисковой строке */
+			.search-box img {
+				width: 40px;
+				height: 30px;
+				cursor: pointer;
+				margin-top: 2%;
+			}
+
+   /* Заголовок "Не найдено" */
+        .not-found {
+            text-align: center; /* Центрирование */
+            font-size: 18px; /* Размер шрифта */
+            margin-top: 20px; /* Отступ сверху */
+            color: gray; /* Цвет */
+            display: none; /* Скрыть заголовок по умолчанию */
+        }
+
+
+        /* Центрированный контейнер */
+        .centered-container {
+            display: flex; /* Flexbox */
+            justify-content: center; /* Центрирование по горизонтали */
+            align-items: center; /* Центрирование по вертикали */
+            flex-direction: column; /* Расположение элементов по вертикали */
+        }
+
+        /* Контейнер для карточек */
+        .card-container {
+            display: flex; /* Flexbox */
+            flex-wrap: wrap; /* Позволяет переносить элементы на новую строку */
+            justify-content: center; /* Начинаем по левому краю */
+        }
+
+        /* Карточка */
+        .card {
+            border: 1px solid #302E92; /* Обводка */
+            border-radius: 10px; /* Закругленные углы */
+            padding: 40px; /* Внутренние отступы */
+            text-align: center; /* Центрирование */
+            position: relative; /* Для позиционирования звездочки */
+            width: 217px; /* Ширина */
+            height: 300px; /* Высота */
+            margin: 10px; /* Отступ между карточками */
+            display: inline-block; /* Позволяет показывать/скрывать карточки */
+        }
+
+        /* Кнопка-звездочка */
+        .favorite-button {
+            position: absolute; /* Позиционирование внутри карточки */
+			bottom: 70%;
+			right: 5%;
+            background: none; /* Без фона */
+			border: none;
+            padding: 5px; /* Внутренний отступ */
+            font-size: 40px; /* Размер звездочки */
+            cursor: pointer; /* Указатель при наведении */
+            transition: color 0.3s; /* Плавный переход */
+        }
+
+        .favorite-button.active {
+            color: yellow; /* Желтый цвет при активации */
+        }
+		
+		.favorite-button:hover {
+            color: yellow; /* Желтый цвет при активации */
+        }
+
+
+        /* Иконка внутри карточки */
+        .card-icon {
+            width: 100px; /* Размер иконки */
+            height: 100px; /* Поддержание пропорций */
+            margin-bottom: 10px; /* Отступ под иконкой */
+        }
+
+        /* Заголовок внутри карточки */
+        .card-title {
+            font-weight: bold; /* Жирный шрифт */
+            margin-top: 10%; /* Отступ под заголовком */
+        }
+
+        /* Текст внутри карточки */
+        .card-text {
+            font-size: 14px !important; /* Размер шрифта */
+            margin-bottom: 30px; /* Отступ под текстом */
+        }
+		
+		.card-button {
+    position: absolute;
+    bottom: 10%;
+    left: 75px;
+}	
+			
+	
+		
+		
+		
+	/*УРОКИ*/	
+		
+		        /* Контейнер для карточек */
+        .cards-container {
+            display: flex; /* Flexbox */
+            flex-wrap: wrap; /* Позволяет переносить элементы на новую строку */
+            justify-content: center; /* Начинаем по левому краю */
+            width: 80%; /* Ширина контейнера */
+        }
+
+        /* Карточка */
+        .cards {
+            border: 1px solid #302E92; /* Обводка */
+            border-radius: 10px; /* Закругленные углы */
+            padding: 40px; /* Внутренние отступы */
+            text-align: center; /* Центрирование */
+            position: relative; /* Для позиционирования звездочки */
+            width: 217px; /* Ширина */
+            height: 200px; /* Высота */
+            margin: 10px; /* Отступ между карточками */
+            display: inline-block; /* Позволяет показывать/скрывать карточки */
+        }
+	
+        /* Заголовок внутри карточки */
+			.cards-title {
+				font-weight: bold;
+				margin-top: 1%;
+			}
+			
+        /* Текст внутри карточки */
+			.cards-text {
+				font-size: 14px !important;
+				margin-top: 15%; /*отступ под текстом */
+			}
+		
+				.cards-button {
+    position: absolute;
+    bottom: 20px;
+    left: 75px;
+}	
+	
+
+
+
+
+	
+/*КОНКРЕТНЫЙ УРОК*/
+	
+        /* Заголовок по центру */
+        .heading {
+            text-align: center; /* Центрирование */
+            font-size: 24px; /* Размер шрифта */
+            margin-top: 20px; /* Отступ сверху */
+        }
+
+    /* Контейнер для карточек */
+        .cardss-container {
+            display: flex;
+            justify-content: center; /* Располагаем карточки в ряд */
+            gap: 20px; /* Пробел между карточками */
+        }
+
+        /* Стили для каждой карточки */
+        .cardss {
+            border: 1px solid #302E92;
+            border-radius: 10px;
+            padding: 20px;
+            width: 300px; /* Ширина карточки */
+            text-align: left;
+        }
+
+        /* Стили для вопросов и вариантов ответов */
+        .question {
+            font-size: 15px; /* Размер шрифта для вопроса */
+			margin: 1%; /* Отступ вокруг вопроса */
+        }
+
+        .answer {
+            display: flex; /* Flex для горизонтального выравнивания */
+            align-items: center; /* Центрирование по вертикали */
+            cursor: pointer; /* Указатель при наведении */
+            margin-bottom: 10px; /* Отступ между вариантами */
+			font-size: 12px !important;
+        }
+		
+		.answer label {
+            margin-left: 10px; /* Отступ между чекбоксом и текстом ответа */
+        }
+
+
+        .correct-answer {
+            color: green; /* Зеленый цвет для правильного ответа */
+        }
+
+        .incorrect-answer {
+            color: red; /* Красный цвет для неправильного ответа */
+        }
+        /* Надпись "Следующий урок" */
+        .next-lesson {
+            position: fixed; /* Фиксированное положение */
+            bottom: 20px; /* Расположение внизу */
+            right: 20px; /* Расположение справа */
+            font-size: 16px; /* Размер шрифта */
+			font-family: 'Gilroy Regular'; 
+        }
+
+.a text {
+	        text-decoration: none !important; /* Без подчеркивания */
+            color: black; /* Черный цвет */
+}
+        /* Стрелка вправо */
+        .next-lesson span {
+            font-size: 24px; /* Размер стрелки */
+			color: black; /* Черный цвет */
+        }
+		
+	
+	
+	
+	
+	
+	
+/* ФЛЕШ-карточки */
+		  
+		  
+	  /* Иконка внутри карточки */
+        .card-img {
+            margin: 10%; /* Отступ под иконкой */
+        }	
+		
+		.card-name {
+			font-weight: bold;
+			margin-top: 0%;
+		}
+
+        /* Карточка с вопросом */
+        .question-card {
+            border: 1px solid #ccc; /* Обводка */
+            border-radius: 10px; /* Закругленные углы */
+            padding: 20px; /* Внутренние отступы */
+            text-align: center; /* Выравнивание текста */
+            width: 500px; /* Ширина карточки */
+			height: 210px;
+            margin-top: 2%; /* Центрирование карточки */
+        }
+
+        /* Стили для кнопок ответов */
+        .answer-button {
+            padding: 10px; /* Отступы внутри кнопки */
+            margin: 5px; /* Отступ между кнопками */
+            border-radius: 10px; /* Закругленные углы */
+            cursor: pointer; /* Курсор указателя */
+            width: 45%; /* Ширина кнопки */
+		    display: inline-block;
+        }
+
+        /* Стили для правильного и неправильного ответа */
+        .correct-answer {
+            border-color: green; /* Обводка зеленого цвета */
+            color: green; /* Текст зеленого цвета */
+        }
+
+        .incorrect-answer {
+            border-color: red; /* Обводка красного цвета */
+            color: red; /* Текст красного цвета */
+        }
+
+   
+		/* Иконка сброса */
+        .reset-icon {
+            cursor: pointer; /* Курсор недоступности */
+            font-size: 35px;
+        }
+
+        /* Контейнер под карточкой */
+
+		.card-bottom {
+			display: flex;
+			align-items: center;
+			width: 36%;
+			margin: 0 auto;
+			justify-content: space-between;
+			margin-top: 1%;
+		}
+
+
+        /* Надпись "Вернуться к темам карточек" */
+        .text-back {
+			text-decoration: none;
+			font-family: 'Gilroy Regular'; 
+			color: #302E92;
+			position: fixed; /* Фиксированное положение */
+            bottom: 25%; /* Расположение внизу */
+            left: 5%; /* Расположение справа */
+            font-size: 16px; /* Размер шрифта */
+        }
+
+     
+	 
+	 
+	 
+	 
+ /* МУЛЬТИМЕДИА */
+
+	  /* Слайдер с карточками */
+        .slider-wrapper {
+            position: relative; /* Относительное позиционирование для стрелок */
+            width: 73%; /* Ширина слайдера */
+            overflow: hidden; /* Скрываем невидимые карточки */
+            margin: 20px auto; /* Центрируем по горизонтали */
+        }
+
+        .slider {
+            display: flex;
+            transition: transform 0.3s ease; /* Анимация при перелистывании */
+       }
+
+
+        .star.active {
+            color: yellow; /* Жёлтая звёздочка при активации */
+        }
+
+        .arrow {
+            position: absolute; /* Для позиционирования стрелок */
+            top: 50%; /* По центру по вертикали */
+            transform: translateY(-50%); /* Выровнять по центру */
+          padding: 10px;
+            cursor: pointer; /* Указатель мыши */
+            z-index: 2; /* Чтобы стрелки были над слайдером */
+        }
+
+        .arrow.left {
+            left: 10px; /* Слева */
+        }
+
+        .arrow.right {
+            right: 10px; /* Справа */
+        }
+
+        .video-overlay {
+            position: fixed; 
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7); 
+            display: none; 
+            align-items: center; 
+            justify-content: center; 
+            z-index: 999; 
+        }
+
+   .video-container {
+            padding: 20px; 
+            border-radius: 10px; 
+            position: relative;
+            z-index: 1000; /* Плеер выше overlay */
+        }
+		
+			
+        /* Кнопка "Посмотреть" */
+        .view-button {
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        /* Подзаголовок */
+        .subheading {
+            text-align: left; /* Выравнивание по левому краю */
+            margin-bottom: 10px;
+			width: 70%;
+			font-size: 25px;
+        }
+		
+		        /* Подзаголовок */
+        .genre {
+			font-size: 15px;
+        }
+
+ 
+
+
+
+
+/* СТАТЬИ */
+
+
+        .main-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Центрируем элементы внутри контейнера */
+        }
+
+        .article-card {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            padding: 10px;
+            margin: 10px 0;
+            text-align: left; 
+            width: 70%; /* Для центрирования в рамках контейнера */
+        }
+
+        .category-tag {
+            background-color: #F4F9FD;
+            border-radius: 12px;
+			border: 1px solid #302E92;
+            padding: 2px 10px;
+            font-size: 12px;
+            color: black;
+            display: inline-block;
+			margin-left: 5%;
+        }
+
+        .article-button {
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+       .filter-wrapper {
+            width: 70%; /* Соответствует ширине статей */
+            text-align: left; /* Выровнять по левому краю */
+            position: relative; /* Для правильного позиционирования */
+            margin-bottom: 20px;
+        }
+
+        .filter-container {
+            display: inline-block; /* Только по размеру кнопки */
+            position: relative; /* Чтобы выпадающий список позиционировался относительно кнопки */
+        }
+
+        .filter-button {
+            padding: 10px;
+            background-color: #F4F9FD;
+            color: black;
+            border-color: #302E92;
+            border-radius: 5px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 5px; /* Отступ между текстом и стрелкой */
+            position: relative;
+			justify-content: space-around;
+        }
+
+        .category-dropdown {
+            display: none; /* Скрыто по умолчанию */
+            position: absolute;
+            top: 100%; /* Начинается сразу под кнопкой */
+            left: 0; /* Выровнять по левому краю */
+            background-color: #f9f9f9;
+            min-width: 120px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+            text-align: left; /* Выровнять текст по левому краю */
+        }
+
+        .category-dropdown a {
+            color: black;
+			font-family: 'Gilroy Light';
+            padding: 8px 16px;
+            text-decoration: none;
+            display: block; /* Сохраняет размеры для клика */
+        }
+
+        .category-dropdown a:hover {
+            color: #302E92; /* Реакция при наведении */
+        }
+
+		#down {
+			margin-top: 4%;
+		}
+
+
+
+.main-content {
+    position: relative; /* Устанавливаем относительное позиционирование для родителя */
+}
+
+
+/* О НАС */
+
+
+       /* Общий контейнер для слайдера и стрелок */
+		.slider-container {
+			position: relative;
+			width: 70%;
+			margin: 20px auto;
+			margin-top: 3%;
+		}
+
+        /* Слайдер */
+        .image-carousel {
+            overflow: hidden;
+            height: 300px; /* Высота слайдера */
+            border: 1px solid #ddd; /* Добавляем рамку */
+        }
+
+        .carousel-track {
+            display: flex;
+            transition: transform 0.5s ease-in-out; /* Анимация при скроллинге */
+            transform: translateX(0); /* Начальная позиция слайдера */
+        }
+
+        .carousel-slide {
+            min-width: 100%; /* Каждый слайд занимает всю ширину */
+            height: 100%; /* Высота каждого слайда */
+            background-size: cover; /* Изображение на весь слайд */
+            background-position: center; /* Центрирование изображения */
+        }
+
+        /* Стрелки за пределами слайдера */
+        .carousel-arrow {
+            position: absolute;
+            top: 50%; /* Центрирование по вертикали */
+            transform: translateY(-50%); /* Центрируем по середине вертикально */
+            padding: 10px;
+            cursor: pointer;
+            z-index: 2; /* Чтобы быть над слайдером */
+        }
+
+        .carousel-arrow.left {
+			right: 105%; /* Левое положение относительно контейнера */
+        }
+
+        .carousel-arrow.right {
+            left: 105%; /* Правое положение относительно контейнера */
+        }
+
+        /* Стиль для формы */
+        .contact-modal {
+            background-color: white;
+            margin: 10% auto;
+            padding: 20px;
+            border: 3px solid #302E92;
+            width: 400px;
+            text-align: center;
+            border-radius: 10%;
+			margin-top: 3%;
+        }
+
+        .contact-input {
+            background-color: #e4e4f1;
+            border-radius: 10px; /* Закругляем уголки */
+            border: none;
+            width: 300px; /* Ширина */
+            height: 30px; /* Высота */
+            margin-bottom: 3%;
+            padding-left: 3%; /* Отступ слева */
+            font-family: 'Gilroy Regular';
+            font-size: 15px;
+        }
+
+        .contact-textarea {
+            background-color: #e4e4f1;
+            border-radius: 10px; /* Закругляем уголки */
+            border: none;
+            width: 300px; /* Ширина */
+            height: 100px; /* Высота */
+            margin-bottom: 3%;
+            padding-left: 3%; /* Отступ слева */
+            resize: none; /* Запрет изменения размера */
+            font-family: 'Gilroy Regular';
+            font-size: 15px;
+        }
+
+        .contact-button {
+            color: #302E92;
+            font-size: 17px;
+            width: 150px;
+            height: 50px;
+            background-color: white;
+            border-radius: 30px; /* Закругляем уголки */
+            border: 1px solid #302E92;
+            font-family: 'Gilroy Medium';
+            cursor: pointer;
+        }
+
+        .contact-button:disabled {
+            background-color: #e4e4f1;
+            color: #302E92;
+            cursor: not-allowed;
+            border-color: #302E92;
+        }
+
+        .contact-button:hover:enabled {
+            background-color: #302E92;
+            color: white;
+        }
+
+	/* Уведомление об успешной отправке */
+        .success-alert {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #e4e4f1;
+            color: black;
+            padding: 10px;
+            border-radius: 5px;
+			border: 1px solid #302E92;
+            z-index: 2;
+            text-align: center;
+            font-family: 'Gilroy Regular';
+            font-size: 15px;
+        }
+	  
+
+
+		.profile-wrapper {
+			display: flex;
+			justify-content: center; /* Центрирование по горизонтали */
+			align-items: center; /* Центрирование по вертикали */
+			margin-top: 3%;
+		}
+
+		.profile-container {
+			display: flex; /* Flexbox для горизонтального выравнивания */
+			align-items: center; /* Выравнивание по вертикали */
+			padding: 20px;
+			width: 50%; /* Ширина блока */
+		}
+
+		.profile-photo {
+			width: 40%; /* Размер изображения */
+			margin-right: 10%; /* Отступ между картинкой профиля и полями */
+		}
+
+		.profile-info-container {
+			display: flex;
+			flex-direction: column; /* Выравниваем элементы по вертикали */
+			align-items: center; /* Центрирование элементов в колонке */
+		}
+
+		.profile-info {
+			display: flex;
+			align-items: center;
+			margin-bottom: 5%;
+		}
+
+		.user-name {
+			font-size: 24px; 
+			font-family: 'Gilroy Regular';
+			margin-bottom: 10px;
+		}
+
+		.settings-icon {
+			cursor: pointer;
+			margin-left: 10px; /* Отступ от имени */
+			width: 25px;
+		}
+
+		.editable-fields {
+			display: flex;
+			flex-direction: column; /* Размещаем элементы в колонке */
+			align-items: center; /* Центрирование элементов по вертикали */
+		}
+
+		.editable {
+			background-color: #e4e4f1;
+			border-radius: 10px; /* Закругление углов */
+			border: none;
+			padding: 10px;
+			font-family: 'Gilroy Regular';
+			width: 350px; /* Ширина полей */
+			margin-bottom: 10px; /* Отступ между полями */
+		}
+
+		#save-button {
+			background-color: white;
+			color: #302E92;
+			border-radius: 30px; /* Закругление углов */
+			border: 2px solid #302E92;
+			padding: 10px 20px; /* Отступы внутри кнопки */
+			cursor: pointer;
+			font-family: 'Gilroy Regular';
+			display: block;
+		}
+
+		#save-button:hover {
+			background-color: #302E92;
+			color: white; /* Изменение цвета при наведении */
+		}
+
+		#save-button:disabled {
+			background-color: #e4e4f1;
+			color: #302E92;
+			cursor: not-allowed;
+		}
+
+
+.favorites-section {
+    width: 70%; /* Ширина секции избранного */
+    margin: 0 auto; /* Центрирование по горизонтали */
+    padding: 20px;
+}
+
+.favorites-container {
+    display: flex; /* Отображение карточек в ряд */
+    flex-direction: column; /* Если карточки должны быть в столбик */
+}
+
+details {
+    border: 1px solid #ccc; /* Граница для секции */
+    border-radius: 5px; /* Закругленные углы */
+    padding: 10px;
+    margin-bottom: 20px; /* Отступ между секциями */
+}
+
+summary {
+    font-size: 18px; /* Размер текста */
+    cursor: pointer; /* Курсор указывает на интерактивный элемент */
+}
+
+summary:hover {
+    color: blue; /* Цвет при наведении */
+}
+
+
+
+
+
+
+
+
+
+  /* Адаптивность для разных ширин */
+     
+        @media (max-width: 1600px) {
+            .container {
+                padding: 10px; /* Уменьшение отступа */
+            }
+
+            .profile-picture {
+                width: 90px;
+                height: 90px;
+            }
+        }
+
+        /* Для max-width 1350px */
+        @media (max-width: 1350px) {
+            .content {
+                margin-right: 10px; /* Уменьшение отступа */
+            }
+        }
+
+        /* Для max-width 900px */
+        @media (max-width: 900px) {
+            .content {
+                text-align: center; /* Выравнивание по центру */
+                margin-right: 0; /* Убираем отступ */
+            }
+
+            .container {
+                flex-direction: column; /* Вертикальное расположение элементов */
+                justify-content: center;
+            }
+
+            .profile-picture {
+                width: 80px;
+                height: 80px;
+            }
+        }
+
+        /* Для max-width 600px */
+        @media (max-width: 600px) {
+            .button {
+                padding: 8px 16px; /* Уменьшение размера кнопки */
+            }
+        }
+
+        /* Для max-width 400px */
+        @media (max-width: 400px) {
+            .container {
+                padding: 5px; /* Уменьшение отступа */
+            }
+        }
+
+        /* Для max-width 330px */
+        @media (max-width: 330px) {
+            .profile-picture {
+                width: 60px; /* Уменьшение картинки */
+                height: 60px;
+            }
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+
+<html lang="ru" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="styles.css">
+	<link rel="stylesheet" href="fonts.css">
+   
+   <title>korean.spb - О нас </title>
+
+</head>
+<body>
+
+<!-- Горизонтальное меню -->
+<div class="navbar">
+    <a href="main.html"><img src="img/korean.spb.svg" alt="Логотип"></a>
+    <div>
+        <div class="dropdown">
+            <a href="#">Обучение <img src ="img/arrow.svg" id="arrow"></a>
+            <div class="dropdown-content">
+                <a href="courses.html">Курсы</a>
+                <a href="flesh-cards.html">Флеш-карточки</a>
+                <a href="multimedia.html">Мультимедийные материалы</a>
+            </div>
+        </div>
+        <a href="articles.html">Статьи</a>
+        <a href="about.html">О нас</a>
+        <a href="#" id="find-partner">Найти напарника</a>
+        <a href="personal-account.html"><img src="img/profile.svg" alt="Профиль" style="width: 55px; height: 55px;"></a>
+    </div>
+</div>
+
+
+<!-- Модальное окно для формы -->
+<div id="partner-modal" class="modal">
+    <div class="modal-content">
+        <span class ="close">&times;</span>
+        <h2 style=" font-family: 'Gilroy Regular'; font-size: 25px; font-weight: normal;">Найти напарника</h2>
+        <form id="Form1">
+		<p style=" font-family: 'Gilroy Regular'; font-size: 15px;">Заполните данную форму, мы подберём вам подходящего кандидата и свяжемся с вами по почте, отправив его контакты для вашего дальнейшего совместного обучения!</p>
+            <input class="FindPartner" type="text" placeholder="Имя пользователя" id="name" required /><br>
+			 <input class="FindPartner" type="email" placeholder="Электронная почта" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required /><br>
+            <input class="FindPartner" type="text" placeholder="Уровень языка" required /><br>
+			 <textarea placeholder="Краткая информация о себе, целях изучения языка, своём уровне и пожеланиях" style="height: 100px;"/></textarea><br>
+            <button type="submit" id="submit" disabled >Отправить</button>
+        </form>
+    </div>
+</div>
+
+<!-- Уведомление об успешной отправке -->
+<div id="successNotification" class="success-notification">
+    Спасибо, заявка отправлена, мы скоро с вами свяжемся!
+</div>
+
+<div class="container">
+    <!-- Секция контента -->
+    <div class="content">
+        <h2>Анастасия - основатель данного проекта</h2> 
+        <p>Училась в НИУ "ВШЭ" по специальности "Востоковед", изучала корейский язык в сфере бизнеса и СМИ. В течение четырёх лет общалась с носителями: практиковала как деловой, так и разговорный стиль речи, также в течение двух лет изучала иероглифику и китайский. <br><br>
+
+		Программа основана на ряде учебников, разработанных корейскими институтами.. Также в ней используются переработанные мной лекции преподавателей НИУ "ВШЭ" и СПбГУ, включая опыт, полученный от переводчиков корейской литературы - Ким Хвана и Ли Сан Юн. 
+    </div>
+
+    <!-- картинка -->
+    <div class="main-picture">
+        <img src="img/about/1.png" alt="Картинка" style="width: 100%; height: 100%; border-radius: 50%;">
+    </div>
+</div>
+
+
+
+<h2  class="heading" style="text-align: center; ">Отзывы</h2> 
+<div class="slider-container">
+    <span class="carousel-arrow left" onclick="previousSlide()"><img src="img/about/arl.svg" width="20"></span>
+
+<div class="image-carousel" style=" height: 95%;">
+
+    <div class="carousel-track" >
+        <div class="carousel-slide">
+            <img src="img/about/2.jpg" alt="Первый слайд" style="width: 100%; height: 100%;"> <!-- Картинка -->
+        </div>
+        <div class="carousel-slide">
+            <img src="img/about/3.jpg" alt="Второй слайд" style="width: 100%; height: 100%;"> <!-- Ещё картинка -->
+        </div>
+        <div class="carousel-slide">
+            <img src="img/about/4.jpg" alt="Третий слайд" style="width: 100%; height: 100%;"> <!-- И ещё картинка -->
+        </div>
+        <div class="carousel-slide">
+            <img src="img/about/5.jpg" alt="Третий слайд" style="width: 100%; height: 100%;"> <!-- И ещё картинка -->
+        </div>
+		<div class="carousel-slide">
+            <img src="img/about/6.jpg" alt="Третий слайд" style="width: 100%; height: 100%;"> <!-- И ещё картинка -->
+        </div>        
+		<div class="carousel-slide">
+            <img src="img/about/7.jpg" alt="Третий слайд" style="width: 100%; height: 100%;"> <!-- И ещё картинка -->
+        </div>  
+
+    </div>
+    <span class="carousel-arrow right" onclick="nextSlide()"><img src="img/about/arr.svg" width="20"></span>		
+    <!-- Стрелки -->
+</div>
+
+	</div>
+
+<!-- Заголовок блока формы -->
+<h2 class="heading" style="margin-top: 5%;">Остались вопросы? Свяжитесь со мной</h2>
+<div class="contact-modal">
+    <h2 style="font-family: 'Gilroy Regular'; font-size: 25px; font-weight: normal;">Форма обратной связи</h2>
+    <form id="contact-form">
+        <p style="font-family: 'Gilroy Regular'; font-size: 15px;">Заполните данную форму, мы с радостью ответим на ваши вопросы и учтём пожелания!</p>
+        <input class="contact-input" type="text" placeholder="Имя пользователя" id="username" required /><br>
+        <input class="contact-input" type="email" placeholder="Электронная почта" id="user-email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required /><br>
+        <textarea class="contact-textarea" placeholder="Ваши пожелания, вопросы и уточнения" required></textarea><br>
+        <button class="contact-button" type="submit" id="contact-submit" disabled>Отправить</button> <!-- Кнопка "Отправить" -->
+    </form>
+</div>
+
+<div class="success-alert">Успешно отправлено!</div> <!-- Уведомление об успешной отправке -->
+
+<footer>
+
+<div class="footer">
+    <!-- Логотип слева -->
+    <div class="logo">
+       <a href="main.html"><img src="img/korean.spb.svg" alt="Логотип"></a>
+    </div>
+
+    <!-- Контактная информация справа -->
+    <div class="contact-info">
+        <!-- Номер телефона -->
+        <div class="contact-item">
+            <img src="img/PHONE.svg" alt="Телефон">
+            <span>+7 985 346 74 23</span>
+        </div>
+        <!-- Адрес электронной почты -->
+        <div class="contact-item">
+            <img src="img/MAIL.svg" alt="Почта">
+            <span>koreanspb@mail.ru</span>
+        </div>
+    </div>
+</div>
+
+</footer>
+
+
+<script src="script.js" async></script> 
+
+    <script>
+// Функция, которая проверяет заполненность всех полей
+function checkFields() {
+    const name = document.getElementById("username").value.trim(); // Имя пользователя
+    const email = document.getElementById("user-email").value.trim(); // Электронная почта
+    const message = document.querySelector(".contact-textarea").value.trim(); // Текстовое поле
+
+    const submitButton = document.getElementById("contact-submit"); // Кнопка "Отправить"
+    
+    // Если все поля заполнены, делаем кнопку доступной
+    if (name && email && message) {
+        submitButton.disabled = false; // Кнопка активируется
+    } else {
+        submitButton.disabled = true; // Кнопка остаётся недоступной
+    }
+}
+
+// Функция обработки отправки формы
+function handleSubmit(event) {
+    event.preventDefault(); // Предотвращаем стандартное поведение формы
+    const successNotification = document.querySelector(".success-alert");
+    successNotification.style.display = "block"; // Показываем уведомление
+    setTimeout(() => {
+        successNotification.style.display = "none"; // Скрываем уведомление через 3 секунды
+    }, 3000);
+
+    // Очищаем форму после отправки
+    const form = document.getElementById("contact-form");
+    form.reset(); // Сбрасываем все поля
+    checkFields(); // Проверка состояния кнопки
+}
+
+// Добавляем обработчики событий на поля ввода
+document.getElementById("username").addEventListener("input", checkFields);
+document.getElementById("user-email").addEventListener("input", checkFields);
+document.querySelector(".contact-textarea").addEventListener("input", checkFields);
+
+document.getElementById("contact-form").addEventListener("submit", handleSubmit); // Обработка отправки формы
+
+
+        let currentSlide = 0;
+
+        function nextSlide() {
+            const sliderTrack = document.querySelector('.carousel-track');
+            const slides = document.querySelectorAll('.carousel-slide');
+            currentSlide = (currentSlide + 1) % slides.length; // Переход по кругу
+            sliderTrack.style.transform = `translateX(-${currentSlide * 100}%)`; // Смещение
+        }
+
+        function previousSlide() {
+            const sliderTrack = document.querySelector('.carousel-track');
+            const slides = document.querySelectorAll('.carousel-slide');
+            currentSlide = (currentSlide - 1 + slides.length) % slides.length; // Переход по кругу назад
+            sliderTrack.style.transform = `translateX(-${currentSlide * 100}%)`;
+        }
+		
+		
+			
+    </script>
+
+</body>
+</html>

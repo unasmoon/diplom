@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+
+<html lang="ru" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="styles.css">
+	<link rel="stylesheet" href="fonts.css">
+   
+   <title>korean.spb - Мультимедиа </title>
+
+</head>
+<body>
+
+<!-- Горизонтальное меню -->
+<div class="navbar">
+    <a href="main.html"><img src="img/korean.spb.svg" alt="Логотип"></a>
+    <div>
+        <div class="dropdown">
+            <a href="#">Обучение <img src ="img/arrow.svg" id="arrow"></a>
+            <div class="dropdown-content">
+                <a href="courses.html">Курсы</a>
+                <a href="flesh-cards.html">Флеш-карточки</a>
+                <a href="multimedia.html">Мультимедийные материалы</a>
+            </div>
+        </div>
+        <a href="articles.html">Статьи</a>
+        <a href="about.html">О нас</a>
+        <a href="#" id="find-partner">Найти напарника</a>
+        <a href="personal-account.html"><img src="img/profile.svg" alt="Профиль" style="width: 55px; height: 55px;"></a>
+    </div>
+</div>
+
+
+<!-- Модальное окно для формы -->
+<div id="partner-modal" class="modal">
+    <div class="modal-content">
+        <span class ="close">&times;</span>
+        <h2 style=" font-family: 'Gilroy Regular'; font-size: 25px; font-weight: normal;">Найти напарника</h2>
+        <form id="Form1">
+		<p style=" font-family: 'Gilroy Regular'; font-size: 15px;">Заполните данную форму, мы подберём вам подходящего кандидата и свяжемся с вами по почте, отправив его контакты для вашего дальнейшего совместного обучения!</p>
+            <input class="FindPartner" type="text" placeholder="Имя пользователя" id="name" required /><br>
+			 <input class="FindPartner" type="email" placeholder="Электронная почта" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required /><br>
+            <input class="FindPartner" type="text" placeholder="Уровень языка" required /><br>
+			 <textarea placeholder="Краткая информация о себе, целях изучения языка, своём уровне и пожеланиях" style="height: 100px;"/></textarea><br>
+            <button type="submit" id="submit" disabled >Отправить</button>
+        </form>
+    </div>
+</div>
+
+<!-- Уведомление об успешной отправке -->
+<div id="successNotification" class="success-notification">
+    Спасибо, заявка отправлена, мы скоро с вами свяжемся!
+</div>
+
+<div class="centered-container"> <!-- Контейнер, который центрирует все содержимое -->
+    <h2 class="heading">Улучшай своё произношение</h2>
+    <!-- Поисковая строка -->
+    <div class="search-box">
+        <input class="FindPartner" id="search-input" type="text" placeholder="Введите ключевые слова для поиска">
+        <img src="img/find.svg" alt="Поиск" onclick="searchCards()"> 
+    </div>
+	
+    
+    <!-- Заголовок "Не найдено" -->
+    <h3 class="not-found" id="not-found-title">Такое не было найдено</h3>
+
+<!-- Блок с подзаголовком и слайдером -->
+<p class="subheading">Фильмы и дорамы</p>
+
+<div class="slider-wrapper">
+
+    <!-- Стрелки для перелистывания -->
+    <span class="arrow left" onclick="scrollSlider('.slider1', 'left')"><img src="img/about/arl.svg" width="15"></span>
+	
+    <div class="slider slider1">
+        <div class="card">
+            <p class="favorite-button" style ="font-size: 35px; bottom: 75%; right: 5px;"onclick="toggleFavorite(this)">★</p>
+            <img class="films-photo" src="img/multimedia/1.png" alt="Токкэби">
+            <p>Токкэби</p>
+            <p class="genre">(фэнтези, драма)</p>
+            <button class="view-button" onclick="showVideo('https://www.youtube.com/embed/EHKt8MFKB6w?si=VPjK4XUs1CFw_I6M')">Посмотреть</button>
+        </div>
+        <!-- Добавляем ещё 7 карточек -->
+        <div class="card">
+            <p class="favorite-button" style ="font-size: 35px; bottom: 75%; right: 5px;"onclick="toggleFavorite(this)">★</p>
+            <img class="films-photo" src="img/multimedia/2.png" alt="Истинная красота">
+            <p>Истинная красота</p>
+            <p class="genre">(романтика)</p>
+            <button class="view-button" onclick="showVideo('https://www.youtube.com/embed/GB1XbTolORA?si=Z09CCfa2UJritDTW')">Посмотреть</button>
+        </div>
+        <div class="card">
+            <p class="favorite-button" style ="font-size: 35px; bottom: 75%; right: 5px;"onclick="toggleFavorite(this)">★</p>
+            <img class="films-photo" src="img/multimedia/3.png" alt="Мышь">
+            <p>Мышь</p>
+            <p class="genre">(триллер)</p>
+            <button class="view-button" onclick="showVideo('https://www.youtube.com/embed/r9g8Q1aQRlk?si=Q1x-eeYw1MNik-1y')">Посмотреть</button>
+        </div>
+        <div class="card">
+            <p class="favorite-button" style ="font-size: 35px; bottom: 75%; right: 5px;"onclick="toggleFavorite(this)">★</p>
+            <img class="films-photo" src="img/multimedia/4.png" alt="Винченцо">
+            <p>Винченцо</p>
+            <p class="genre">(драма)</p>
+            <button class="view-button" onclick="showVideo('https://www.youtube.com/embed/YLIAm057Vh0?si=lZR7fnixcF1ggD6H')">Посмотреть</button>
+        </div>
+        <div class="card">
+            <p class="favorite-button" style ="font-size: 35px; bottom: 75%; right: 5px;"onclick="toggleFavorite(this)">★</p>
+            <img class="films-photo" src="img/multimedia/5.png" alt="Счастье">
+            <p>Счастье</p>
+            <p class="genre">(триллер)</p>
+            <button class="view-button" onclick="showVideo('https://www.youtube.com/embed/ttLgSVfpQdo?si=-2AxaTvSmjAcpOW-')">Посмотреть</button>
+        </div>
+        <div class="card">
+            <p class="favorite-button" style ="font-size: 35px; bottom: 75%; right: 5px;"onclick="toggleFavorite(this)">★</p>
+            <img class="films-photo" src="img/multimedia/6.png" alt="Старт-ап">
+            <p>Старт-ап</p>
+            <p class="genre">(драма)</p>
+            <button class="view-button" onclick="showVideo('https://www.youtube.com/embed/ANK2thbB5do?si=jVwnpytymuaRsUCO')">Посмотреть</button>
+        </div>
+        <div class="card">
+            <p class="favorite-button" style ="font-size: 35px; bottom: 75%; right: 5px;"onclick="toggleFavorite(this)">★</p>
+            <img class="films-photo" src="img/multimedia/7.png" alt="Пачинко">
+            <p>Пачинко</p>
+            <p class="genre">(драма)</p>
+            <button class="view-button" onclick="showVideo('https://www.youtube.com/embed/gQzEgYf7a2A?si=FKAbwCVrtzBKnAFf')">Посмотреть</button>
+        </div>
+    </div>
+
+    <span class="arrow right" onclick="scrollSlider('.slider1', 'right')"><img src="img/about/arr.svg" width="15"></span>
+
+</div>
+
+
+<!-- Блок с подзаголовком и слайдером -->
+<p class="subheading">Интервью</p>
+
+
+<div class="slider-wrapper">
+
+    <!-- Стрелки для перелистывания -->
+    <span class="arrow left" onclick="scrollSlider('.slider2', 'left')"><img src="img/about/arl.svg" width="15"></span>
+    <span class="arrow right" onclick="scrollSlider('.slider2', 'right')"><img src="img/about/arr.svg" width="15"></span>
+	
+    <div class="slider slider2">
+        <div class="card" id="multimedia">
+            <p class="favorite-button" style ="font-size: 35px; bottom: 75%; right: 5px;"onclick="toggleFavorite(this)">★</p>
+            <img class="films-photo" src="img/multimedia/8.png" alt="Ли Дон Ук">
+            <p>Ли Дон Ук</p>
+            <p class="genre">(для ESQUIRE)</p>
+            <button class="view-button" onclick="showVideo('https://www.youtube.com/embed/m1o3VeU4CT0?si=fUmd01nklG4i7XLw')">Посмотреть</button>
+        </div>
+	
+        <!-- Добавляем ещё 7 карточек -->
+        <div class="card" id="multimedia">
+            <p class="favorite-button" style ="font-size: 35px; bottom: 75%; right: 5px;"onclick="toggleFavorite(this)">★</p>
+            <img class="films-photo" src="img/multimedia/9.png" alt="Им Ши Ван">
+            <p>Им Ши Ван</p>
+            <p class="genre">(для PLUMA&C)</p>
+            <button class="view-button" onclick="showVideo('https://www.youtube.com/embed/jzqtg8GMjKo?si=hoNc15ahYQOkPv3n')">Посмотреть</button>
+        </div>
+        <div class="card" id="multimedia">
+            <p class="favorite-button" style ="font-size: 35px; bottom: 75%; right: 5px;"onclick="toggleFavorite(this)">★</p>
+            <img class="films-photo" src="img/multimedia/10.png" alt="Чжи Чан Ук">
+            <p>Чжи Чан Ук</p>
+            <p class="genre">(для GQ Korea)</p>
+            <button class="view-button" onclick="showVideo('https://www.youtube.com/embed/wX8mUmYSFUg?si=rwRS2IHSmwc_CJw2')">Посмотреть</button>
+        </div>
+        <div class="card" id="multimedia">
+            <p class="favorite-button" style ="font-size: 35px; bottom: 75%; right: 5px;"onclick="toggleFavorite(this)">★</p>
+            <img class="films-photo" src="img/multimedia/11.png" alt="Гон Ю">
+            <p>Гон Ю</p>
+            <p class="genre">(для ELLE KOREA)</p>
+            <button class="view-button" onclick="showVideo('https://www.youtube.com/embed/WR6IpoXeTQ8?si=Me8DhUsoZqI4gl95')">Посмотреть</button>
+        </div>
+        <div class="card" id="multimedia">
+            <p class="favorite-button" style ="font-size: 35px; bottom: 75%; right: 5px;"onclick="toggleFavorite(this)">★</p>
+            <img class="films-photo" src="img/multimedia/12.png" alt="Чжи Чан Ук">
+            <p>Чжи Чан Ук</p>
+            <p class="genre">(для Oha4)</p>
+            <button class="view-button" onclick="showVideo('https://www.youtube.com/embed/Hpoc6VSgFd8?si=hPvY6s3aa1VMtmfM')">Посмотреть</button>
+        </div>
+    </div>
+
+</div>
+</div>
+
+
+<!-- Плеер для видео -->
+<div class="video-overlay" onclick="hideVideo()">
+    <div class="video-container" onclick="event.stopPropagation()">  
+
+        <!-- Встроенное видео -->
+        
+		<iframe width="560" height="315" frameborder="0" allowfullscreen></iframe> <!-- YouTube или другой внешний источник -->
+    </div>
+</div>
+<footer>
+
+<div class="footer">
+    <!-- Логотип слева -->
+    <div class="logo">
+       <a href="main.html"><img src="img/korean.spb.svg" alt="Логотип"></a>
+    </div>
+
+    <!-- Контактная информация справа -->
+    <div class="contact-info">
+        <!-- Номер телефона -->
+        <div class="contact-item">
+            <img src="img/PHONE.svg" alt="Телефон">
+            <span>+7 985 346 74 23</span>
+        </div>
+        <!-- Адрес электронной почты -->
+        <div class="contact-item">
+            <img src="img/MAIL.svg" alt="Почта">
+            <span>koreanspb@mail.ru</span>
+        </div>
+    </div>
+</div>
+
+</footer>
+
+
+<script src="script.js" async></script> 
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script> <!-- Скрипт Swiper -->
+
+<script>
+       let currentIndex1 = 0; 
+        let currentIndex2 = 0; 
+
+        function toggleStar(star) {
+            star.classList.toggle('active'); 
+        }
+
+        function scrollSlider(sliderSelector, direction) {
+            const track = document.querySelector(sliderSelector); 
+            const cardWidth = document.querySelector('.card').offsetWidth + 20; 
+            const totalCards = track.children.length; 
+
+            let currentIndex = sliderSelector === '.slider1' ? currentIndex1 : currentIndex2; 
+
+            if (direction === 'right') {
+                currentIndex++; 
+                if (currentIndex >= totalCards - 3) {
+                    currentIndex = 0; 
+                }
+            } else {
+                currentIndex--; 
+                if (currentIndex < 0) {
+                    currentIndex = totalCards - 4; 
+                }
+            }
+
+            track.style.transform = `translateX(${-currentIndex * cardWidth}px)`; 
+
+            if (sliderSelector === '.slider1') {
+                currentIndex1 = currentIndex; 
+            } else {
+                currentIndex2 = currentIndex; 
+            }
+        }
+
+       function showVideo(videoUrl) {
+            const overlay = document.querySelector('.video-overlay'); 
+            const iframe = overlay.querySelector('iframe'); 
+            iframe.src = videoUrl; 
+            overlay.style.display = 'flex'; 
+        }
+
+        function hideVideo() {
+            const overlay = document.querySelector('.video-overlay'); 
+            const iframe = overlay.querySelector('iframe'); 
+            iframe.src = ''; 
+            overlay.style.display = 'none'; 
+        }
+		
+	
+    </script>
+
+
+</body>
+</html>

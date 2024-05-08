@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+
+<html lang="ru" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="styles.css">
+	<link rel="stylesheet" href="fonts.css">
+   
+   <title>korean.spb - Конкретный Урок </title>
+
+</head>
+<body>
+
+<!-- Горизонтальное меню -->
+<div class="navbar">
+    <a href="main.html"><img src="img/korean.spb.svg" alt="Логотип"></a>
+    <div>
+        <div class="dropdown">
+            <a href="#">Обучение <img src ="img/arrow.svg" id="arrow"></a>
+            <div class="dropdown-content">
+                <a href="courses.html">Курсы</a>
+                <a href="flesh-cards.html">Флеш-карточки</a>
+                <a href="multimedia.html">Мультимедийные материалы</a>
+            </div>
+        </div>
+        <a href="articles.html">Статьи</a>
+        <a href="about.html">О нас</a>
+        <a href="#" id="find-partner">Найти напарника</a>
+        <a href="personal-account.html"><img src="img/profile.svg" alt="Профиль" style="width: 55px; height: 55px;"></a>
+    </div>
+</div>
+
+
+<!-- Модальное окно для формы -->
+<div id="partner-modal" class="modal">
+    <div class="modal-content">
+        <span class ="close">&times;</span>
+        <h2 style=" font-family: 'Gilroy Regular'; font-size: 25px; font-weight: normal;">Найти напарника</h2>
+        <form id="Form1">
+		<p style=" font-family: 'Gilroy Regular'; font-size: 15px;">Заполните данную форму, мы подберём вам подходящего кандидата и свяжемся с вами по почте, отправив его контакты для вашего дальнейшего совместного обучения!</p>
+            <input class="FindPartner" type="text" placeholder="Имя пользователя" id="name" required /><br>
+			 <input class="FindPartner" type="email" placeholder="Электронная почта" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required /><br>
+            <input class="FindPartner" type="text" placeholder="Уровень языка" required /><br>
+			 <textarea placeholder="Краткая информация о себе, целях изучения языка, своём уровне и пожеланиях" style="height: 100px;"/></textarea><br>
+            <button type="submit" id="submit" disabled >Отправить</button>
+        </form>
+    </div>
+</div>
+
+<!-- Уведомление об успешной отправке -->
+<div id="successNotification" class="success-notification">
+    Спасибо, заявка отправлена, мы скоро с вами свяжемся!
+</div>
+
+<!-- Заголовок урока -->
+<p class="heading">Урок 1</p>
+
+<!-- Плеер для видео -->
+<div class="heading">
+    <video width="600" controls>
+        <source src="lesson1.mp4" type="video/mp4">
+        Ваш браузер не поддерживает тег video.
+    </video>
+</div>
+
+<!-- Письменный конспект -->
+<p class="heading">Письменный конспект урока</p>
+<div style="text-align: center;">
+    <p style="text-align: left; display: inline-block; max-width: 800px; font-family: 'Gilroy Light'; font-size: 15px;text-indent: 20px;">
+        Сегодня мы начнём изучение корейского языка с&nbspпервого уровня. Прежде прочтём диалог. "안녕하십니까?" — это предикатив качества 안녕하다. В&nbspкорейском языке разницы между именем прилагательным и&nbspглаголом нет, поскольку с&nbspточки зрения грамматики слова одинаковые. Единственное, что&nbspих различает — это значение: одни предикативы обозначают действия, поэтому&nbspих называют предикативами действия (в&nbspрусском языке это глагол), другие — предикативы качества, обозначают качество, поэтому в&nbspрусском языке эквивалентом выступает имя прилагательное. 안녕하다. — это имя прилагательное, то&nbspесть&nbspпредикатив качества со&nbspзначением "быть благополучным". Кроме того, в&nbspэтом диалоге есть и&nbspдругие предикативы. Например, глагол-связка 이다. Как&nbspвы видите, предикативы заканчиваются одинаково. ~ 다 — это показатель начальной формы. Для того,&nbspчтобы&nbspобразовать от&nbspпредикатива, находящегося в&nbspначальной форме, повествовательное или&nbspвопросительное предложение, нам нужно добавить окончание конечной сказуемости. Окончание конечной сказуемости называется таким образом, поскольку&nbspприсоединяется к&nbspсказуемому, находящемуся в&nbspконце. Для&nbspпредикативов, основа которых заканчивается на&nbspгласный, мы добавляем окончания: "~ ㅂ니다. / ㅂ니까?". Для&nbspпредикативов, основа которых заканчивается на&nbspсогласный, мы добавляем окончания: "~ 습니다. / 니까?". Таким образом, от&nbspимени прилагательного 안녕하다 мы можем образовать две формы: повествовательную и&nbspвопросительную: "안녕합니다." и&nbsp"안녕합니까? 안녕합니다." — мы утверждаем, что&nbspвсё благополучно. "안녕합니까?" — спрашиваем у&nbspсобеседника, всё ли&nbspу&nbspнего благополучно. В&nbspкорейском языке эквивалентом "Здравствуйте!" является выражение "안녕하십니까?" — это&nbspпредикатив качество 안녕하다 (быть благополучным), вопросительный окончание конечной сказуемости и&nbspсуффикс ~ (으) 시, который будет рассмотрен позже. В&nbspданном случае он выражает дополнительное уважение к&nbspподлежащему. Сейчас подлежащее и&nbspлицо, к&nbspкоторому мы обращаемся. совпадает. Таким образом, мы выражаем уважение к&nbspсвоему собеседнику.
+    </p>
+</div>
+
+<!-- Заголовок -->
+<p class="heading">Тест на проверку знаний</p>
+
+<div class="cardss-container">
+    <!-- Первая карточка -->
+    <div class="cardss">
+        <p class="question">Выберете выражение, которое является эквивалентом "Здравствуйте!"</p>
+        <p class="answer">
+            <input type="radio" id="q1a" name="question1" value="안녕합니다" onclick="checkAnswer(1, '안녕하십니까?')"> 
+            <label for="q1a">안녕합니다</label>
+        </p>
+        <p class="answer">
+            <input type="radio" id="q1b" name="question1" value="안녕합니까?" onclick="checkAnswer(1, '안녕하십니까?')"> 
+            <label for="q1b">안녕합니까?</label>
+        </p>
+        <p class="answer">
+            <input type="radio" id="q1c" name="question1" value="안녕하십니까?" onclick="checkAnswer(1, '안녕하십니까?')"> 
+            <label for="q1c">안녕하십니까?</label>
+        </p>
+    </div>
+
+    <!-- Вторая карточка -->
+    <div class="cardss">
+        <p class="question">Какое окончание нужно использовать для утверждения чего-либо?</p>
+        <p class="answer">
+            <input type="radio" id="q2a" name="question2" value="~ ㅂ니까? / ~ 습니까?" onclick="checkAnswer(2, '~ ㅂ니다. / ~ 습니다.')"> 
+            <label for="q2a">~ ㅂ니까? / ~ 습니까?</label>
+        </p>
+        <p class="answer">
+            <input type="radio" id="q2b" name="question2" value="입니다." onclick="checkAnswer(2, '~ ㅂ니다. / ~ 습니다.')"> 
+            <label for="q2b">입니다.</label>
+        </p>
+        <p class="answer">
+            <input type="radio" id="q2c" name="question2" value="~ ㅂ니다. / ~ 습니다." onclick="checkAnswer(2, '~ ㅂ니다. / ~ 습니다.')"> 
+            <label for="q2c">~ ㅂ니다. / ~ 습니다.</label>
+        </p>
+    </div>
+
+    <!-- Третья карточка -->
+    <div class="cardss">
+        <p class="question">Какое окончание нужно использовать для постановки вопроса?</p>
+        <p class="answer">
+            <input type="radio" id="q3a" name="question3" value="~ ㅂ니까? / ~ 습니까?" onclick="checkAnswer(3, '~ ㅂ니까? / ~ 습니까?')"> 
+            <label for="q3a">~ ㅂ니까? / ~ 습니까?</label>
+        </p>
+        <p class="answer">
+            <input type="radio" id="q3b" name="question3" value="입니다." onclick="checkAnswer(3, '~ ㅂ니까? / ~ 습니까?')"> 
+            <label for="q3b">입니다.</label>
+        </p>
+        <p class ="answer">
+            <input type="radio" id="q3c" name="question3" value="~ ㅂ니다. / ~ 습니다." onclick="checkAnswer(3, '~ ㅂ니까? / ~ 습니까?')"> 
+            <label for="q3c">~ ㅂ니다. / ~ 습니다.</label>
+        </p>
+    </div>
+
+</div>
+
+<!-- Следующий урок -->
+<div class ="next-lesson">
+    <a href="next_lesson.html"  class="text">
+        Следующий урок <span>&#9658;</span>
+    </a>
+</div>
+
+<footer>
+
+<div class="footer">
+    <!-- Логотип слева -->
+    <div class="logo">
+       <a href="main.html"><img src="img/korean.spb.svg" alt="Логотип"></a>
+    </div>
+
+    <!-- Контактная информация справа -->
+    <div class="contact-info">
+        <!-- Номер телефона -->
+        <div class="contact-item">
+            <img src="img/PHONE.svg" alt="Телефон">
+            <span>+7 985 346 74 23</span>
+        </div>
+        <!-- Адрес электронной почты -->
+        <div class="contact-item">
+            <img src="img/MAIL.svg" alt="Почта">
+            <span>koreanspb@mail.ru</span>
+        </div>
+    </div>
+</div>
+
+</footer>
+
+
+<script src="script.js" async></script> 
+
+<script>
+        function checkAnswer(cardIndex, correctAnswer) {
+            const answers = document.querySelectorAll(`input[name="question${cardIndex}"]`);
+            answers.forEach(answer => {
+                const label = document.querySelector(`label[for="${answer.id}"]`);
+                if (answer.checked) {
+                    if (answer.value === correctAnswer) {
+                        label.classList.add('correct-answer'); // Окрашивание правильного ответа
+                    } else {
+                        label.classList.add('incorrect-answer'); // Окрашивание неправильного ответа
+                    }
+                }
+            });
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,151 @@
+﻿<!DOCTYPE html>
+
+<html lang="ru" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="styles.css">
+	<link rel="stylesheet" href="fonts.css">
+	
+    <title>korean.spb - Главная </title>
+
+</head>
+<body>
+
+<!-- Горизонтальное меню -->
+<div class="navbar">
+    <a href="main.html"><img src="img/korean.spb.svg" alt="Логотип"></a>
+    <div>
+        <div class="dropdown">
+            <a href="#">Обучение <img src ="img/arrow.svg" id="arrow"></a>
+            <div class="dropdown-content">
+                <a href="courses.html">Курсы</a>
+                <a href="flesh-cards.html">Флеш-карточки</a>
+                <a href="multimedia.html">Мультимедийные материалы</a>
+            </div>
+        </div>
+        <a href="articles.html">Статьи</a>
+        <a href="about.html">О нас</a>
+        <a href="#" id="find-partner">Найти напарника</a>
+        <a href="personal-account.html"><img src="img/profile.svg" alt="Профиль" style="width: 55px; height: 55px;"></a>
+    </div>
+</div>
+
+
+<!-- Модальное окно для формы -->
+<div id="partner-modal" class="modal">
+    <div class="modal-content">
+        <span class ="close">&times;</span>
+        <h2 style=" font-family: 'Gilroy Regular'; font-size: 25px; font-weight: normal;">Найти напарника</h2>
+        <form id="Form1">
+		<p style=" font-family: 'Gilroy Regular'; font-size: 15px;">Заполните данную форму, мы подберём вам подходящего кандидата и свяжемся с вами по почте, отправив его контакты для вашего дальнейшего совместного обучения!</p>
+            <input class="FindPartner" type="text" placeholder="Имя пользователя" id="name" required /><br>
+			 <input class="FindPartner" type="email" placeholder="Электронная почта" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required /><br>
+            <input class="FindPartner" type="text" placeholder="Уровень языка" required /><br>
+			 <textarea placeholder="Краткая информация о себе, целях изучения языка, своём уровне и пожеланиях" style="height: 100px;"/></textarea><br>
+            <button type="submit" id="submit" disabled >Отправить</button>
+        </form>
+    </div>
+</div>
+
+<!-- Уведомление об успешной отправке -->
+<div id="successNotification" class="success-notification">
+    Спасибо, заявка отправлена, мы скоро с вами свяжемся!
+</div>
+
+
+<div class="container">
+    <!-- Секция контента -->
+    <div class="content">
+        <h2>Корейский язык - это легко</h2> 
+        <p>Программа изучения, разработанная преподавателем по корейскому языку, делает упор на последовательность и точность обучения. 
+<br><br>Наш ресурс поможет любому человеку превратить учебный процесс в увлекательное путешествие по корейской культуре!</p>
+        <button href="https://example.com" class="more">Больше о нас</button>
+    </div>
+
+    <!-- Круглая картинка -->
+    <div class="main-picture">
+        <img src="img/Rectangle45.png" alt="Картинка" style="width: 100%; height: 100%; border-radius: 50%;">
+    </div>
+</div>
+
+
+<h2 style="text-align: center;">Зачем стоит изучать язык?</h2> 
+<div class="reasons-container">
+
+		<div class="reason">
+            <img class="reasons" src="img/reason1.png" alt="Фото 1">
+            <p>погрузитесь в корейскую культуру и лайфстайл</p>
+        </div>
+        <div class="reason">
+            <img class="reasons" src="img/reason2.png" alt="Фото 2">
+            <p>расширьте свой круг общения!</p>
+        </div>
+        <div class="reason">
+            <img class="reasons" src="img/reason3.png" alt="Фото 3">
+            <p>попробуйте себя в работе в корейской фирме</p>
+        </div>
+</div>
+<h2 style="text-align: center;">Начни обучение прямо сейчас</h2> 
+
+
+<div id="learning-container">
+    <!-- Первый блок (картинка слева) -->
+    <div class="learning">
+        <img src="img/one.png" alt="Курсы">
+        <div class="content1">
+            <p class="headline">Курсы</p>
+            <p>На данный момент имеется пять основных курсов, каждый из которых состоит из нескольких уроков.</p>
+            <button onclick="document.location='courses.html'">Перейти</button>
+        </div>
+    </div>
+
+    <!-- Второй блок (картинка справа) -->
+    <div class="learning">
+        <div class="content2">
+            <p class="headline">Флеш-карточки</p>
+            <p>Изучите лексику по различным темам, попробовав выбрать правильный вариант ответа.</p>
+            <button  onclick="document.location='flesh-cards.html'">Перейти</button>
+        </div>
+        <img src="img/two.png" alt="Флеш-карточки">
+    </div>
+
+    <!-- Третий блок (картинка слева) -->
+    <div class="learning">
+        <img src="img/three.png" alt="Мультимедийные материалы">
+        <div class="content1">
+            <p class="headline">Мультимедийные материалы</p>
+            <p>Посмотрите интервью любимых поп-звёзд или отрывки из дорам, уделив время учёбе!</p>
+            <button  onclick="document.location='flesh-cards.html'">Перейти</button>
+        </div>
+    </div>
+</div>
+
+<footer">
+
+<div class="footer">
+    <!-- Логотип слева -->
+    <div class="logo">
+       <a href="main.html"><img src="img/korean.spb.svg" alt="Логотип"></a>
+    </div>
+
+    <!-- Контактная информация справа -->
+    <div class="contact-info">
+        <!-- Номер телефона -->
+        <div class="contact-item">
+            <img src="img/PHONE.svg" alt="Телефон">
+            <span>+7 985 346 74 23</span>
+        </div>
+        <!-- Адрес электронной почты -->
+        <div class="contact-item">
+            <img src="img/MAIL.svg" alt="Почта">
+            <span>koreanspb@mail.ru</span>
+        </div>
+    </div>
+</div>
+
+</footer>
+
+<script src="script.js" async></script> 
+
+</body>
+</html>
